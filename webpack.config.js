@@ -46,9 +46,15 @@ module.exports = {
                     {
                         // Loads a SASS/SCSS file and compiles it to CSS
                         loader: 'sass-loader'
-                    }
+                    },
+
                 ]
-            }
+            },
+            {
+                // Asset module for processing assets
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     }
 }

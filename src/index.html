@@ -1,14 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Webpack</title>
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Öffentliche Spendenregistriegung</title>
 </head>
+
+<!--Header & Menu-->
 <body>
-<div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Webpack!</h1>
-    <button class="btn btn-primary">Primary button</button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" id="logoField" href="#"></a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Öffentliche Spendenregistriegung</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"
+                >Spenden <span class="sr-only"></span></a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Unterstützen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Mitgliedschaft</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--Content-->
+<div class="container-fluid p-3">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h1>Registrierung zur Kleiderspende</h1>
+
+                <div class="form-check">
+                    <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="true"
+                            id="takeaway"
+                            checked=""
+                    />
+                    <label class="form-check-label" for="takeaway">Abholung</label>
+
+                    <br />
+
+                    <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="true"
+                            id="directDelivery"
+                            onclick="checkDirectCheckOut()"
+                    />
+                    <label class="form-check-label" for="directDelivery">
+                        Übergabe an der Geschäftsstelle
+                    </label>
+                    <br />
+                    <label for="adressField" class="form-label mt-3"
+                    >Straße mit Hausnummer:</label
+                    >
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="adressField"
+                            required
+                    />
+
+                    <label for="postNumberField" class="form-label"
+                    >Postleizahl:</label
+                    >
+
+                    <input
+                            data-bs-toggle="tooltip"
+                            data-bs-title="The last tip!"
+                            type="text"
+                            class="form-control"
+                            id="postNumberField"
+                            onkeyup="verifyPostNumber()"
+                    />
+                    <div id="postNumberHelp" class="form-text">
+                        Geben Sie eine Adresse im Abholungegebiet ein
+                    </div>
+
+                    <label for="selectedClothing" class="form-label mt-3"
+                    >Spendendetails:</label
+                    >
+
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="selectedClothing"
+                    >
+                        <option selected>Welche Art Kleidung Spenden Sie?</option>
+                        <option value="1">Winterkleidung</option>
+                        <option value="2">Sommerkleidung</option>
+                        <option value="2">Kinderkleidung</option>
+                        <option value="3">Schuhe</option>
+                    </select>
+
+                    <select
+                            class="form-select mt-3"
+                            aria-label="Default select example"
+                            id="selectedRegion"
+                    >
+                        <option selected>Wählen Sie ein Kriegsgebiet aus?</option>
+                        <option value="1">Ukraine</option>
+                        <option value="2">Somalia</option>
+                        <option value="2">Afghanisthan</option>
+                    </select>
+
+                    <button
+                            type="submit"
+                            class="btn btn-danger mb-3 mt-3"
+                            onclick="checkOut()"
+                    >
+                        Registrieren
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!--Footer-->
+<div class="container-fluid text-center fixed-bottom bg-danger text-white">
+    Rechtlicher Hinweis:<br />
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br />
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+    erat,<br />
+    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+    rebum. <br />
+    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+    sit amet.<br />
+</div>
+
+<!-- Optional JavaScript -->
+
 </body>
 </html>
