@@ -15,3 +15,6 @@ image.src= Icon;
 image.width = 60;
 image.height = 54;
 logoField.appendChild(image);
+
+//direct delivery selected functionality
+
