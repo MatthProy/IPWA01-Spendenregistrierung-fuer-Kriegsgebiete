@@ -18,10 +18,13 @@ image.height = 54;
 logoField.appendChild(image);
 
 //direct delivery selected functionality
-let directDelivery = document.getElementById("directDelivery")
+let directDelivery = document.getElementById("directDelivery");
+let adressField = document.getElementById("adressField");
+let postNumberField = document.getElementById("postNumberField");
+
+let postNumberHelp = document.getElementById("postNumberHelp");
 directDelivery.addEventListener("click",(evt) => {
-    let adressField = document.getElementById("adressField");
-    let postNumberField = document.getElementById("postNumberField");
+
     if(directDelivery.checked === true){
         adressField.setAttribute("disabled", "");
         postNumberField.setAttribute("disabled", "");
@@ -30,6 +33,23 @@ directDelivery.addEventListener("click",(evt) => {
         postNumberField.removeAttribute("disabled");
     }
 })
+
+//veryfication of postnumber functionality
+postNumberField.addEventListener("keyup",(evt) =>{
+    let userInputPlz = document.getElementById("postNumberField").value;
+    if(userInputPlz.startsWith("5" ) === true){
+        postNumberHelp.innerHTML= "Geben Sie eine Adresse im Abholungegebiet ein";
+        if(userInputPlz.startsWith("51") === true){
+            postNumberHelp.innerHTML= "OK";
+            document.getElementById("postNumberHelp").style.color = "green";
+
+        }else{
+            postNumberHelp.innerHTML = "Ihre Adresse liegt nicht im Abholungsgebiet";
+            document.getElementById("postNumberHelp").style.color = "black";
+        }}
+
+})
+
 
 
 
