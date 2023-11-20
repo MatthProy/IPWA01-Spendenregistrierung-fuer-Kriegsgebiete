@@ -21,17 +21,20 @@ logoField.appendChild(image);
 let directDelivery = document.getElementById("directDelivery");
 let adressField = document.getElementById("adressField");
 let postNumberField = document.getElementById("postNumberField");
+let takeaway = document.getElementById("takeaway");
 
 let postNumberHelp = document.getElementById("postNumberHelp");
 directDelivery.addEventListener("click",(evt) => {
     if(directDelivery.checked === true){
         adressField.setAttribute("disabled", "");
         postNumberField.setAttribute("disabled", "");
+        takeaway.removeAttribute("checked");
         postNumberField.value = "";
         adressField.value = "";
     }else{
         adressField.removeAttribute("disabled")
         postNumberField.removeAttribute("disabled");
+        takeaway.setAttribute("checked", "");
     }
 })
 
