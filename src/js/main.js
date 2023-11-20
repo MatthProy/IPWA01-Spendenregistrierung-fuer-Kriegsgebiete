@@ -24,10 +24,11 @@ let postNumberField = document.getElementById("postNumberField");
 
 let postNumberHelp = document.getElementById("postNumberHelp");
 directDelivery.addEventListener("click",(evt) => {
-
     if(directDelivery.checked === true){
         adressField.setAttribute("disabled", "");
         postNumberField.setAttribute("disabled", "");
+        postNumberField.value = "";
+        adressField.value = "";
     }else{
         adressField.removeAttribute("disabled")
         postNumberField.removeAttribute("disabled");

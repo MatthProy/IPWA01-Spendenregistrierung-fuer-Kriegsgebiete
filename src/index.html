@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -15,7 +15,8 @@
 <nav class="navbar navbar-expand-lg bg-danger">
     <div class="container-fluid">
         <a class="navbar-brand" id="logoField" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -30,109 +31,111 @@
 </nav>
 
 <!--Content-->
-<div class="container-fluid p-3">
-    <div class="col">
-        <div class="card">
-            <div class="card-body">
-                <h1>Registrierung zur Kleiderspende</h1>
+<form>
+    <div class="container-fluid p-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Registrierung zur Kleiderspende</h1>
 
-                <div class="form-check">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value="true"
-                            id="takeaway"
-                            checked=""
-                    />
-                    <label class="form-check-label" for="takeaway">Abholung</label>
+                    <div class="form-check">
+                        <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="true"
+                                id="takeaway"
+                                checked=""
+                        />
+                        <label class="form-check-label" for="takeaway">Abholung</label>
 
-                    <br/>
+                        <br/>
 
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value="true"
-                            id="directDelivery"
-                    />
-                    <label class="form-check-label" for="directDelivery">
-                        Übergabe an der Geschäftsstelle
-                    </label>
-                    <br />
-                    <label for="adressField" class="form-label mt-3"
-                    >Straße mit Hausnummer:</label
-                    >
-                    <input
-                            type="text"
-                            class="form-control"
-                            id="adressField"
-                            required
-                    />
+                        <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="true"
+                                id="directDelivery"
+                        />
+                        <label class="form-check-label" for="directDelivery">
+                            Übergabe an der Geschäftsstelle
+                        </label>
+                        <br/>
+                        <label for="adressField" class="form-label mt-3"
+                        >Straße mit Hausnummer:</label
+                        >
+                        <input
+                                type="text"
+                                class="form-control"
+                                id="adressField"
+                                required
+                        />
 
-                    <label for="postNumberField" class="form-label"
-                    >Postleizahl:</label
-                    >
+                        <label for="postNumberField" class="form-label"
+                        >Postleizahl:</label
+                        >
 
-                    <input
-                            data-bs-toggle="tooltip"
-                            data-bs-title="The last tip!"
-                            type="text"
-                            class="form-control"
-                            id="postNumberField"
-                    />
-                    <div id="postNumberHelp" class="form-text">
-                        Geben Sie eine Adresse im Abholungegebiet ein
+                        <input
+                                data-bs-toggle="tooltip"
+                                data-bs-title="The last tip!"
+                                type="text"
+                                class="form-control"
+                                id="postNumberField"
+                        />
+                        <div id="postNumberHelp" class="form-text">
+                            Geben Sie eine Adresse im Abholungegebiet ein
+                        </div>
+
+                        <label for="selectedClothing" class="form-label mt-3"
+                        >Spendendetails:</label
+                        >
+
+                        <select
+                                class="form-select"
+                                aria-label="Default select example"
+                                id="selectedClothing"
+                        >
+                            <option selected>Welche Art Kleidung Spenden Sie?</option>
+                            <option value="1">Winterkleidung</option>
+                            <option value="2">Sommerkleidung</option>
+                            <option value="2">Kinderkleidung</option>
+                            <option value="3">Schuhe</option>
+                        </select>
+
+                        <select
+                                class="form-select mt-3"
+                                aria-label="Default select example"
+                                id="selectedRegion"
+                        >
+                            <option selected>Wählen Sie ein Kriegsgebiet aus?</option>
+                            <option value="1">Ukraine</option>
+                            <option value="2">Somalia</option>
+                            <option value="2">Afghanistan</option>
+                        </select>
+
+                        <button
+                                type="submit"
+                                class="btn btn-danger mb-3 mt-3"
+                                onclick="checkOut()"
+                        >
+                            Registrieren
+                        </button>
                     </div>
-
-                    <label for="selectedClothing" class="form-label mt-3"
-                    >Spendendetails:</label
-                    >
-
-                    <select
-                            class="form-select"
-                            aria-label="Default select example"
-                            id="selectedClothing"
-                    >
-                        <option selected>Welche Art Kleidung Spenden Sie?</option>
-                        <option value="1">Winterkleidung</option>
-                        <option value="2">Sommerkleidung</option>
-                        <option value="2">Kinderkleidung</option>
-                        <option value="3">Schuhe</option>
-                    </select>
-
-                    <select
-                            class="form-select mt-3"
-                            aria-label="Default select example"
-                            id="selectedRegion"
-                    >
-                        <option selected>Wählen Sie ein Kriegsgebiet aus?</option>
-                        <option value="1">Ukraine</option>
-                        <option value="2">Somalia</option>
-                        <option value="2">Afghanistan</option>
-                    </select>
-
-                    <button
-                            type="submit"
-                            class="btn btn-danger mb-3 mt-3"
-                            onclick="checkOut()"
-                    >
-                        Registrieren
-                    </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</form>
 
 <!--Footer-->
 <div class="container-fluid text-center fixed-bottom bg-danger text-white">
-    Rechtlicher Hinweis:<br />
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br />
+    Rechtlicher Hinweis:<br/>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/>
     sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat,<br />
+    erat,<br/>
     sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-    rebum. <br />
+    rebum. <br/>
     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-    sit amet.<br />
+    sit amet.<br/>
 </div>
 
 <!-- Optional JavaScript -->
