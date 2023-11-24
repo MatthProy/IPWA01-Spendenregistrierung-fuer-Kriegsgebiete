@@ -42,7 +42,7 @@ directDelivery.addEventListener("click",(evt) => {
 postNumberField.addEventListener("keyup",(evt) =>{
     let userInputPlz = document.getElementById("postNumberField").value;
     if(userInputPlz.startsWith("5" ) === true){
-        postNumberHelp.innerHTML= "Geben Sie eine Adresse im Abholungegebiet ein";
+        postNumberHelp.innerHTML= "Geben Sie eine Adresse im Abholungegebiet 51xxx ein";
         if(userInputPlz.startsWith("51") === true){
             postNumberHelp.innerHTML= "OK";
             document.getElementById("postNumberHelp").style.color = "green";

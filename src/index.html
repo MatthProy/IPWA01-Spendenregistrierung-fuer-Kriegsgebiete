@@ -12,14 +12,14 @@
 
 <!--Header & Menu-->
 <body>
-<nav class="navbar navbar-expand-lg bg-danger">
+<nav class="navbar navbar-expand-lg bg-danger navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" id="logoField" href="#"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">Spenden</a>
@@ -31,7 +31,7 @@
 </nav>
 
 <!--Content-->
-<form>
+<form class="was-validated">
     <div class="container-fluid p-3">
         <div class="col">
             <div class="card">
@@ -68,7 +68,7 @@
                                 class="form-control"
                                 id="adressField"
                                 required
-                        />
+                        >
 
                         <label for="postNumberField" class="form-label"
                         >Postleizahl:</label
@@ -80,9 +80,10 @@
                                 type="text"
                                 class="form-control"
                                 id="postNumberField"
+                                required
                         />
                         <div id="postNumberHelp" class="form-text">
-                            Geben Sie eine Adresse im Abholungegebiet ein
+                            Geben Sie eine Adresse im Abholungegebiet 51xxx ein
                         </div>
 
                         <label for="selectedClothing" class="form-label mt-3"
@@ -93,8 +94,9 @@
                                 class="form-select"
                                 aria-label="Default select example"
                                 id="selectedClothing"
+                                required
                         >
-                            <option selected>Welche Art Kleidung Spenden Sie?</option>
+                            <option value ="">Welche Art Kleidung Spenden Sie?</option>
                             <option value="1">Winterkleidung</option>
                             <option value="2">Sommerkleidung</option>
                             <option value="2">Kinderkleidung</option>
@@ -105,8 +107,9 @@
                                 class="form-select mt-3"
                                 aria-label="Default select example"
                                 id="selectedRegion"
+                                required
                         >
-                            <option selected>Wählen Sie ein Kriegsgebiet aus?</option>
+                            <option value="">Wählen Sie ein Kriegsgebiet aus?</option>
                             <option value="1">Ukraine</option>
                             <option value="2">Somalia</option>
                             <option value="2">Afghanistan</option>
@@ -115,7 +118,6 @@
                         <button
                                 type="submit"
                                 class="btn btn-danger mb-3 mt-3"
-                                onclick="checkOut()"
                         >
                             Registrieren
                         </button>
@@ -129,7 +131,7 @@
 <!--Footer-->
 <div class=" footer container-fluid text-center fixed-bottom bg-danger text-white">
     Rechtlicher Hinweis:<br>
-    Spenden werden gemeinnützig eingesetzt und können nicht steuerlich geltend gemacht werden
+    Spenden werden gemeinnützig eingesetzt und können nicht steuerlich geltend gemacht werden.
 
 </div>
 
