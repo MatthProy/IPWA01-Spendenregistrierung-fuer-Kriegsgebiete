@@ -68,12 +68,13 @@ registryForm.addEventListener("submit", (evt) =>{
 
     confirm("Vielen Dank für Ihre Spende! Ihre Spende wird registriert. Bitte überprüfen Sie abschließend Ihre Angaben." + "\n"
             + "\n" +
-            "Art der gespendeten Kleidung:" + clothing + "\n" +
-            "Ausgewähltes Krisengebiet" + region + "\n" +
-            "Abholungsadresse:" + adress + "\n" +
-            "Postleitzahl:" + zip + "\n" +
+            "Art der Spende:"+ " " + "\n" +
+            "Art der gespendeten Kleidung:" + " "+ clothing + "\n" +
+            "Ausgewähltes Krisengebiet:" + " " + region + "\n" +
+            "Abholungsadresse:"+ " " + adress + "\n" +
+            "Postleitzahl:" + " " + zip + "\n" +
             + "\n" +
-            "Registriert um:");
+            "Registriert um:" + " ");
    // registryForm.submit();
 })
 
