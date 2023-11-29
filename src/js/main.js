@@ -54,6 +54,30 @@ postNumberField.addEventListener("keyup",(evt) =>{
 
 })
 
+//submission and final validation
+let registryForm = document.getElementById("registryForm");
+let selectedClothing = document.getElementById("selectedClothing")
+let selectedRegion = document.getElementById("selectedRegion");
+registryForm.addEventListener("submit", (evt) =>{
+    evt.preventDefault()
+
+    let adress = adressField.value;
+    let zip = postNumberField.value;
+    let clothing = selectedClothing.value;
+    let region = selectedRegion.value;
+
+    confirm("Vielen Dank für Ihre Spende! Ihre Spende wird registriert. Bitte überprüfen Sie abschließend Ihre Angaben." + "\n"
+            + "\n" +
+            "Art der gespendeten Kleidung:" + clothing + "\n" +
+            "Ausgewähltes Krisengebiet" + region + "\n" +
+            "Abholungsadresse:" + adress + "\n" +
+            "Postleitzahl:" + zip + "\n" +
+            + "\n" +
+            "Registriert um:");
+   // registryForm.submit();
+})
+
+
 
 
 
