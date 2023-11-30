@@ -59,14 +59,14 @@ let registryForm = document.getElementById("registryForm");
 let selectedClothing = document.getElementById("selectedClothing")
 let selectedRegion = document.getElementById("selectedRegion");
 registryForm.addEventListener("submit", (evt) =>{
-    evt.preventDefault()
+    evt.preventDefault() //prevents form from auto submitting
 
     let adress = adressField.value;
     let zip = postNumberField.value;
     let clothing = selectedClothing.value;
     let region = selectedRegion.value;
 
-    confirm("Vielen Dank für Ihre Spende! Ihre Spende wird registriert. Bitte überprüfen Sie abschließend Ihre Angaben." + "\n"
+  if(confirm("Vielen Dank für Ihre Spende! Ihre Spende wird registriert. Bitte überprüfen Sie abschließend Ihre Angaben." + "\n"
             + "\n" +
             "Art der Spende:"+ " " + "\n" +
             "Art der gespendeten Kleidung:" + " "+ clothing + "\n" +
@@ -74,8 +74,15 @@ registryForm.addEventListener("submit", (evt) =>{
             "Abholungsadresse:"+ " " + adress + "\n" +
             "Postleitzahl:" + " " + zip + "\n" +
             + "\n" +
-            "Registriert um:" + " ");
-   // registryForm.submit();
+            "Registriert um:" + " ") === true ){
+
+      registryForm.submit();
+
+  }else{
+      evt.preventDefault()
+  }
+
+
 })
 
 
