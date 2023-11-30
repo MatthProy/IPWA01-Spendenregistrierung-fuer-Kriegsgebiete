@@ -44,6 +44,7 @@
                                 type="checkbox"
                                 value="true"
                                 id="takeaway"
+                                name="takeaway"
                                 checked=""
                         />
                         <label class="form-check-label" for="takeaway">Abholung</label>
@@ -55,6 +56,7 @@
                                 type="checkbox"
                                 value="true"
                                 id="directDelivery"
+                                name="directDelivery"
                         />
                         <label class="form-check-label" for="directDelivery">
                             Übergabe an der Geschäftsstelle
@@ -98,6 +100,7 @@
                                 class="form-select"
                                 aria-label="Default select example"
                                 id="selectedClothing"
+                                name="selectedClothing"
                                 required
                         >
                             <option value ="">Welche Art Kleidung Spenden Sie?</option>
@@ -111,6 +114,7 @@
                                 class="form-select mt-3"
                                 aria-label="Default select example"
                                 id="selectedRegion"
+                                name="selectedRegion"
                                 required
                         >
                             <option value="">Wählen Sie ein Kriegsgebiet aus?</option>
@@ -123,7 +127,8 @@
                                 type="submit"
                                 id="submitButton"
                                 class="btn btn-danger mb-3 mt-3"
-                                formmethod="post"
+                                formmethod="get"
+                                formaction="https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/"
                         >
                             Registrieren
                         </button>
