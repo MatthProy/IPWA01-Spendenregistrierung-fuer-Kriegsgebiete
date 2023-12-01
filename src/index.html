@@ -31,7 +31,7 @@
 </nav>
 
 <!--Content-->
-<form class="was-validated" id="registryForm">
+<form class="was-validated" id="registryForm" method="get" action="https://http.cat/401">
     <div class="container-fluid p-3">
         <div class="col">
             <div class="card">
@@ -69,6 +69,7 @@
                                 type="text"
                                 class="form-control"
                                 id="adressField"
+                                name="adress"
                                 minlength="3"
                                 maxlength="35"
                                 required
@@ -84,6 +85,7 @@
                                 type="text"
                                 class="form-control"
                                 id="postNumberField"
+                                name="zip"
                                 minlength="5"
                                 maxlength="5"
                                 required
@@ -127,8 +129,7 @@
                                 type="submit"
                                 id="submitButton"
                                 class="btn btn-danger mb-3 mt-3"
-                                formmethod="post"
-                                formaction="https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/"
+
                         >
                             Registrieren
                         </button>
