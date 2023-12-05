@@ -22,6 +22,7 @@ let directDelivery = document.getElementById("directDelivery");
 let adressField = document.getElementById("adressField");
 let postNumberField = document.getElementById("postNumberField");
 let takeaway = document.getElementById("takeaway");
+let typeOfDelivery = "Abholung";
 
 let postNumberHelp = document.getElementById("postNumberHelp");
 directDelivery.addEventListener("click",(evt) => {
@@ -31,6 +32,7 @@ directDelivery.addEventListener("click",(evt) => {
         takeaway.removeAttribute("checked");
         postNumberField.value = "";
         adressField.value = "";
+        typeOfDelivery = "Übergabe an der Geschäftsstelle"
     }else{
         adressField.removeAttribute("disabled")
         postNumberField.removeAttribute("disabled");
@@ -49,7 +51,7 @@ postNumberField.addEventListener("keyup",(evt) =>{
 
         }else{
             postNumberHelp.innerHTML = "Ihre Adresse liegt nicht im Abholungsgebiet";
-            document.getElementById("postNumberHelp").style.color = "black";
+            document.getElementById("postNumberHelp").style.color = "red";
         }}
 
 })
@@ -68,13 +70,12 @@ registryForm.addEventListener("submit", (evt) =>{
 
   if(confirm("Vielen Dank für Ihre Spende! Ihre Spende wird registriert. Bitte überprüfen Sie abschließend Ihre Angaben." + "\n"
             + "\n" +
-            "Art der Spende:"+ " " + "\n" +
+            "Art der Übergabe:"+ " " + typeOfDelivery + " " + "\n" +
             "Art der gespendeten Kleidung:" + " "+ clothing + "\n" +
             "Ausgewähltes Krisengebiet:" + " " + region + "\n" +
             "Abholungsadresse:"+ " " + adress + "\n" +
             "Postleitzahl:" + " " + zip + "\n" +
-            + "\n" +
-            "Registriert um:" + " ") === true ){
+            + "\n" + "Registriert um:" + " ") === true ){
 
       registryForm.submit();
 
@@ -85,6 +86,18 @@ registryForm.addEventListener("submit", (evt) =>{
 
 })
 
+//function to generate type of delivery text
+
+function setTypeOfDelivery(){
+
+    if(takeaway.checked === true ){
+        typeOfDelivery = "Abholung";
+    }else{
+        typeOfDelivery = "Übergabe an der Geschäftsstelle";
+    }
+}
+
+takeaway.addEventListener("change", setTypeOfDelivery);
 
 
 
