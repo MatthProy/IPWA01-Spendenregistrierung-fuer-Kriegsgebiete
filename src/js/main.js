@@ -23,7 +23,6 @@ let adressField = document.getElementById("adressField");
 let postNumberField = document.getElementById("postNumberField");
 let takeaway = document.getElementById("takeaway");
 let typeOfDelivery = "Abholung";
-
 let postNumberHelp = document.getElementById("postNumberHelp");
 directDelivery.addEventListener("click",(evt) => {
     if(directDelivery.checked === true){
@@ -39,7 +38,6 @@ directDelivery.addEventListener("click",(evt) => {
         takeaway.setAttribute("checked", "");
     }
 })
-
 //veryfication of postnumber functionality
 postNumberField.addEventListener("keyup",(evt) =>{
     let userInputPlz = document.getElementById("postNumberField").value;
@@ -55,7 +53,6 @@ postNumberField.addEventListener("keyup",(evt) =>{
         }}
 
 })
-
 //submission and final validation
 let registryForm = document.getElementById("registryForm");
 let selectedClothing = document.getElementById("selectedClothing")
@@ -75,19 +72,16 @@ registryForm.addEventListener("submit", (evt) =>{
             "Ausgewähltes Krisengebiet:" + " " + region + "\n" +
             "Abholungsadresse:"+ " " + adress + "\n" +
             "Postleitzahl:" + " " + zip + "\n" +
-            + "\n" + "Registriert um:" + " ") === true ){
+            + "\n" + "Registriert um:" + " " + formattedTime +  " " + "am" + " " + formattedDate + " ") === true ){
 
       registryForm.submit();
 
   }else{
       evt.preventDefault()
   }
-
-
 })
 
 //function to generate type of delivery text
-
 function setTypeOfDelivery(){
 
     if(takeaway.checked === true ){
@@ -99,7 +93,15 @@ function setTypeOfDelivery(){
 
 takeaway.addEventListener("change", setTypeOfDelivery);
 
+//Date and time of submission
+const currentTime = new Date();
+const yyyy = currentTime.getFullYear();
+let mm = currentTime.getMonth();
+let dd = currentTime.getDay();
 
+let hours = currentTime.getHours();
+let minutes = currentTime.getMinutes();
+let seconds = currentTime.getSeconds();
 
-
-
+const formattedDate = dd + "." + mm + "." + yyyy;
+const formattedTime = hours + ":" + minutes + ":" + seconds;
