@@ -1,5 +1,9 @@
 {
-  "description": "",
+  "name": "spendenregistrierung-fuer-kriegsgebiete",
+  "version": "1.0.0",
+  "author": "matthias proy",
+  "description": "spendenregistrierungs frontend projekt",
+  "license": "ICU",
   "private": true,
   "main": "index.js",
   "scripts": {
