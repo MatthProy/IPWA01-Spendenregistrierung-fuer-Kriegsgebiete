@@ -32,7 +32,7 @@ directDelivery.addEventListener("click",(evt) => {
         postNumberField.value = "51141";
         adressField.value = "Geschäftsstelle";
         typeOfDelivery = "Übergabe an der Geschäftsstelle"
-        postNumberHelp.innerHTML= "OK";
+        postNumberHelp.innerText= "OK";
         postNumberHelp.style.color = "green";
     }else{
         adressField.removeAttribute("disabled")
@@ -44,13 +44,13 @@ directDelivery.addEventListener("click",(evt) => {
 postNumberField.addEventListener("keyup",(evt) =>{
     let userInputPlz = document.getElementById("postNumberField").value;
     if(userInputPlz.startsWith("5" ) === true){
-        postNumberHelp.innerHTML= "Geben Sie eine Adresse im Abholungegebiet 51xxx ein";
+        postNumberHelp.innerText= "Geben Sie eine Adresse im Abholungegebiet 51xxx ein";
         if(userInputPlz.startsWith("51") === true){
-            postNumberHelp.innerHTML= "OK";
+            postNumberHelp.innerText= "OK";
             postNumberHelp.style.color = "green";
 
         }else{
-            postNumberHelp.innerHTML = "Ihre Adresse liegt nicht im Abholungsgebiet";
+            postNumberHelp.innerText = "Ihre Adresse liegt nicht im Abholungsgebiet";
             postNumberHelp.style.color = "red";
         }}
 
