@@ -74,7 +74,7 @@ registryForm.addEventListener("submit", (evt) =>{
             "Ausgewähltes Krisengebiet:" + " " + region + "\n" +
             "Abholungsadresse:"+ " " + adress + "\n" +
             "Postleitzahl:" + " " + zip + "\n" +
-            + "\n" + "Registriert um:" + " " + formattedTime +  " " + "am" + " " + formattedDate + " ") === true ){
+            + "\n" + "Registriert um:" + " " + formattedTime + " " + "Uhr" + " " + "am" + " " + day + " " + "den" + " " + formattedDate + " ") === true ){
 
       registryForm.submit();
 
@@ -96,14 +96,13 @@ function setTypeOfDelivery(){
 takeaway.addEventListener("change", setTypeOfDelivery);
 
 //Date and time of submission
-const currentTime = new Date();
-const yyyy = currentTime.getFullYear();
-let mm = currentTime.getMonth();
-let dd = currentTime.getDay();
+const currentDate = new Date();
+let formattedDate = currentDate.toLocaleDateString("de");
 
-let hours = currentTime.getHours();
-let minutes = currentTime.getMinutes();
-let seconds = currentTime.getSeconds();
+let day = currentDate.toLocaleString('de', {  weekday: 'long' })
 
-const formattedDate = dd + "." + mm + "." + yyyy;
+let hours = currentDate.getHours();
+let minutes = currentDate.getMinutes();
+let seconds = currentDate.getSeconds();
+
 const formattedTime = hours + ":" + minutes + ":" + seconds;
