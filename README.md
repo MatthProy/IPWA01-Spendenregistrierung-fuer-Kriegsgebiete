@@ -1,4 +1,5 @@
 Prerequisites:
+
 To run the application, please ensure that Git and Node.js is installed on your local machine.
 
 To copy the application on your local system please run the following commands:
