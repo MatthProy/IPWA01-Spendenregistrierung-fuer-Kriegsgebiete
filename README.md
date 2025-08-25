@@ -12,7 +12,7 @@ To install the nessesary dependencies and run the application run the following 
 
 npm install
 
-npm run
+npm run start
 
 
 
